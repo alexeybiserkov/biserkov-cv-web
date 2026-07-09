@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { NavLink } from "./ui/NavLink";
+import { profile } from "@/data/profile";
 import styles from "./Nav.module.css";
 
 const items: [string, string][] = [
@@ -23,7 +24,7 @@ export function Nav() {
   return (
     <div className={[styles.bar, scrolled ? styles.scrolled : ""].join(" ")}>
       <a href="#top" className={styles.mark}>
-        <span className={styles.prompt}>$</span> alexey biserkov
+        <span className={styles.prompt}>$</span> {profile.handle}
       </a>
       <div className={styles.links}>
         {items.map(([href, label]) => (
