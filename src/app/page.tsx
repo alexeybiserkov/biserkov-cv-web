@@ -8,7 +8,8 @@ import { StatusPill } from "@/components/ui/StatusPill";
 import { TerminalWindow, Prompt } from "@/components/ui/TerminalWindow";
 import { profile } from "@/data/profile";
 import { projects } from "@/data/projects";
-import { posts } from "@/data/posts";
+import { experience } from "@/data/experience";
+import { skills, languages, certifications } from "@/data/skills";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -53,6 +54,73 @@ export default function Home() {
           </TerminalWindow>
         </section>
 
+        <section id="experience" className={styles.section}>
+          <div className={styles.sectionHead}>
+            <h2 className={styles.h2}>experience</h2>
+          </div>
+          <div className={styles.jobList}>
+            {experience.map((job) => (
+              <div key={job.company} className={styles.job}>
+                <div className={styles.jobHead}>
+                  <div>
+                    <div className={styles.jobRole}>{job.role}</div>
+                    <div className={styles.jobCompany}>
+                      {job.company} · {job.location}
+                    </div>
+                  </div>
+                  <div className={styles.jobMeta}>
+                    {job.current && <StatusPill status="success">current</StatusPill>}
+                    <span className={styles.jobPeriod}>{job.period}</span>
+                  </div>
+                </div>
+                <ul className={styles.jobBullets}>
+                  {job.bullets.map((b, i) => (
+                    <li key={i}>{b}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="skills" className={styles.section}>
+          <div className={styles.sectionHead}>
+            <h2 className={styles.h2}>skills</h2>
+          </div>
+          <div className={styles.skillGrid}>
+            {skills.map((group) => (
+              <div key={group.category} className={styles.skillGroup}>
+                <div className={styles.skillCategory}>{group.category}</div>
+                <div className={styles.tagRow}>
+                  {group.items.map((item) => (
+                    <Tag key={item}>{item}</Tag>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className={styles.extrasGrid}>
+            <div>
+              <div className={styles.skillCategory}>Languages</div>
+              <ul className={styles.plainList}>
+                {languages.map((l) => (
+                  <li key={l.name}>
+                    <span className={styles.textPrimary}>{l.name}</span> — {l.level}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <div className={styles.skillCategory}>Certifications</div>
+              <ul className={styles.plainList}>
+                {certifications.map((c) => (
+                  <li key={c}>{c}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
         <section id="projects" className={styles.section}>
           <div className={styles.sectionHead}>
             <h2 className={styles.h2}>selected projects</h2>
@@ -71,30 +139,6 @@ export default function Home() {
                   ))}
                 </div>
               </Card>
-            ))}
-          </div>
-        </section>
-
-        <section id="writing" className={styles.section}>
-          <div className={styles.sectionHead}>
-            <h2 className={styles.h2}>writing</h2>
-          </div>
-          <div className={styles.postList}>
-            {posts.map((post) => (
-              <div key={post.slug} className={styles.post}>
-                <div>
-                  <div className={styles.postTitle}>{post.title}</div>
-                  <div className={styles.postExcerpt}>{post.excerpt}</div>
-                </div>
-                <div className={styles.postMeta}>
-                  <span className={styles.postDate}>{post.date}</span>
-                  <div className={styles.tagRow}>
-                    {post.tags.map((t) => (
-                      <Tag key={t}>{t}</Tag>
-                    ))}
-                  </div>
-                </div>
-              </div>
             ))}
           </div>
         </section>

@@ -6,8 +6,9 @@ import { profile } from "@/data/profile";
 import styles from "./Nav.module.css";
 
 const items: [string, string][] = [
+  ["#experience", "experience"],
+  ["#skills", "skills"],
   ["#projects", "projects"],
-  ["#writing", "writing"],
   ["#contact", "contact"],
 ];
 
