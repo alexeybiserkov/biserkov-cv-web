@@ -1,0 +1,82 @@
+/* Color tokens — dark, technical, terminal-adjacent.
+   Base palette first, semantic aliases second. Always consume the
+   semantic layer (--surface-*, --text-*, --border-*, --accent-*) in
+   components; base tokens exist for building new aliases only. */
+
+:root {
+  /* ---- base: neutrals (near-black, cool-neutral ramp) ---- */
+  --gray-0: #000000;
+  --gray-50: #0a0b0d;
+  --gray-100: #101114;
+  --gray-150: #15161a;
+  --gray-200: #1a1b1f;
+  --gray-300: #232428;
+  --gray-400: #2e2f34;
+  --gray-500: #45464c;
+  --gray-600: #63656c;
+  --gray-700: #8a8c93;
+  --gray-800: #b4b6bc;
+  --gray-900: #eef0f2;
+  --gray-950: #ffffff;
+
+  /* ---- base: accent blue (interactive, links, focus) ---- */
+  --blue-300: #a7bcff;
+  --blue-400: #7d98ff;
+  --blue-500: #4d7cff;
+  --blue-600: #3a63e0;
+  --blue-700: #2c4cb3;
+  --blue-900: #10193d;
+
+  /* ---- base: status ---- */
+  --green-500: #3ecf6e;
+  --green-700: #1f7a41;
+  --green-900: #0c2417;
+
+  --amber-500: #e8a33d;
+  --amber-700: #9c6a1c;
+  --amber-900: #2b1f0c;
+
+  --red-500: #e8604a;
+  --red-700: #a83a2a;
+  --red-900: #2e120c;
+
+  /* ---- semantic: surfaces ---- */
+  --surface-canvas: var(--gray-50);
+  --surface-raised: var(--gray-100);
+  --surface-elevated: var(--gray-150);
+  --surface-inset: var(--gray-0);
+  --surface-hover: var(--gray-200);
+  --surface-pressed: var(--gray-300);
+
+  /* ---- semantic: text ---- */
+  --text-primary: var(--gray-900);
+  --text-secondary: var(--gray-700);
+  --text-tertiary: var(--gray-600);
+  --text-disabled: var(--gray-500);
+  --text-on-accent: #ffffff;
+  --text-inverse: var(--gray-50);
+
+  /* ---- semantic: borders ---- */
+  --border-subtle: var(--gray-300);
+  --border-default: var(--gray-400);
+  --border-strong: var(--gray-500);
+  --border-focus: var(--blue-500);
+
+  /* ---- semantic: accent (interactive) ---- */
+  --accent: var(--blue-500);
+  --accent-hover: var(--blue-400);
+  --accent-active: var(--blue-600);
+  --accent-muted: var(--blue-900);
+  --accent-border: var(--blue-700);
+
+  /* ---- semantic: status ---- */
+  --status-success: var(--green-500);
+  --status-success-muted: var(--green-900);
+  --status-warning: var(--amber-500);
+  --status-warning-muted: var(--amber-900);
+  --status-danger: var(--red-500);
+  --status-danger-muted: var(--red-900);
+
+  /* ---- semantic: terminal prompt accent (signature motif) ---- */
+  --prompt-char: var(--green-500);
+}

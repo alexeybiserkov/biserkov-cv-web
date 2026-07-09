@@ -1,0 +1,16 @@
+.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: var(--surface-raised);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  transition: background var(--duration-base) var(--ease-standard),
+    border-color var(--duration-base) var(--ease-standard);
+}
+.clickable { cursor: pointer; }
+.clickable:hover {
+  background: var(--surface-hover);
+  border-color: var(--border-strong);
+}

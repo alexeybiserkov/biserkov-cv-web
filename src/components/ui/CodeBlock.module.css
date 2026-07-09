@@ -1,0 +1,25 @@
+.wrap {
+  background: var(--surface-inset);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: auto;
+}
+.lang {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.pre {
+  margin: 0;
+  padding: 16px;
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-size);
+  line-height: 1.6;
+  color: var(--text-primary);
+  white-space: pre-wrap;
+  word-break: break-word;
+}

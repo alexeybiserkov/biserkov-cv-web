@@ -1,0 +1,9 @@
+.form { display: flex; flex-direction: column; gap: 18px; max-width: 480px; }
+.done {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

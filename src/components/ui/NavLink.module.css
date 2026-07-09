@@ -1,0 +1,20 @@
+.link {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--text-secondary);
+  position: relative;
+  padding-bottom: 3px;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+.link:hover, .active { color: var(--text-primary); }
+.underline {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--duration-base) var(--ease-standard);
+}
+.link:hover .underline, .active .underline { transform: scaleX(1); }

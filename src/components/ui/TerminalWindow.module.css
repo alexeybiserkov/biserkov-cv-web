@@ -1,0 +1,27 @@
+.window {
+  background: var(--surface-inset);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  font-family: var(--font-mono);
+}
+.titlebar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.dots { display: flex; gap: 6px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+.dotRed { background: var(--status-danger); }
+.dotAmber { background: var(--status-warning); }
+.dotGreen { background: var(--status-success); }
+.title { font-size: 12px; color: var(--text-tertiary); margin: 0 auto; }
+.body {
+  padding: 16px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+.prompt { color: var(--prompt-char); }
