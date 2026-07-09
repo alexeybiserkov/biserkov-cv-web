@@ -17,7 +17,7 @@ export const profile = {
   email: "alexeybiserkov@gmail.com",
   social: {
     github: "https://github.com/alexeybiserkov",
-    linkedin: "https://www.linkedin.com/",
+    linkedin: "https://www.linkedin.com/in/alex-biserkov-238b51a0/",
   },
   seo: {
     title: "Alex Biserkov — Full-Stack Web Developer",
